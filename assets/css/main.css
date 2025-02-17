@@ -1,0 +1,1166 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #F39C12;
+    --secondary-color: #2C1810;
+    --text-color: #333;
+    --light-color: #fff;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    margin-bottom: 5rem;
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    color: var(--primary-color);
+    font-family: 'Pacifico', cursive;
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: "Font Awesome 5 Free"; */
+}
+
+.brand-name {
+    font-family: 'Pacifico', cursive;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: var(--transition);
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger i {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+/* Updated Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 0 30px;
+        transition: 0.4s ease-in-out;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+
+    .hamburger.active i:before {
+        content: "\f00d";
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+
+
+
+    /* Add overlay when menu is active */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    /* .nav-overlay.active {
+        display: block;
+    } */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../img/top-view-fried-chicken-bucket-burgers_23-2148699020.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: #8B6914;
+    transform: translateY(-2px);
+}
+
+/* About Section */
+.about {
+    padding: 6rem 2rem;
+    background: #f9f9f9;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+}
+
+/* Menu Section */
+.menu {
+    padding: 6rem 2rem;
+    background: var(--light-color);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-content {
+    padding: 1.5rem;
+}
+
+.menu-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.menu-price {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.menu-description {
+    color: #666;
+}
+
+/* Reservation Section */
+.reservation {
+    padding: 6rem 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('../img/waitress-is-serving-table_130153-92.jpg') center/cover no-repeat;
+    color: var(--light-color);
+}
+
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    padding: 4rem 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        color: var(--light-color);
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 2rem;
+        flex-direction: column;
+        text-align: center;
+        transition: var(--transition);
+    }
+
+    .nav-menu.active {
+        top: 70px;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+}
+
+
+        /* About Page Specific Styles */
+        .about-page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                       url('../img/a-logo-for-a-fast-food-restaurant-called_Fprm0GanS5-mkSh4FL0uMw_q12IqkeWTGaZUgtKsoPIqw.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+        }
+
+        .about-page-hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .about-page-hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-page-section {
+            padding: 6rem 2rem;
+        }
+
+        .about-page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-page-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            margin-bottom: 6rem;
+        }
+
+        .about-page-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .about-page-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-page-title {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .about-page-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: #f9f9f9;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: var(--light-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+        }
+
+        .team-member-name {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member-role {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .values-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                       url('../img/medium-shot-cook-posing-studio_23-2150275706.jpg') center/cover no-repeat;
+            color: var(--light-color);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .value-item {
+            text-align: center;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .value-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-page-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-page-hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-page-image {
+                height: 300px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+        /* menu */
+
+        
+        /* menu-page Page Specific Styles */
+        .menu-page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                       url('../img/a-logo-for-a-fast-food-restaurant-called_Fprm0GanS5-mkSh4FL0uMw_q12IqkeWTGaZUgtKsoPIqw.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+        }
+
+        .menu-page-hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .menu-page-hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-page-section {
+            padding: 6rem 2rem;
+        }
+
+        .menu-page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .menu-page-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .menu-page-tab {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border-radius: 30px;
+        }
+
+        .menu-page-tab.active,
+        .menu-page-tab:hover {
+            background: var(--primary-color);
+            color: var(--light-color);
+        }
+
+        .menu-page-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .menu-page-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-page-item {
+            background: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .menu-page-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-page-item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-page-item-content {
+            padding: 1.5rem;
+        }
+
+        .menu-page-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-page-item-title {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+        }
+
+        .menu-page-item-price {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .menu-page-item-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .menu-page-item-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .menu-page-item-tag {
+            background: #f0f0f0;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .special-badge {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .combo-suggestion {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: #f9f9f9;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .cta-button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--light-color);
+            padding: 4rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            color: var(--light-color);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-page-hero-title {
+                font-size: 2.5rem;
+            }
+
+            .menu-page-tab {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .category-title {
+                font-size: 2rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /*reservation page Hero Section */
+        .reservation-page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('../img/waitress-is-serving-table_130153-92.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light-color);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* reservation-page Section */
+        .reservation-page-section {
+            padding: 6rem 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .reservation-page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .reservation-page-info {
+            padding-right: 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-text {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .policy-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .policy-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .policy-item::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Form Styles */
+        .reservation-page-form {
+            background: var(--light-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #8B6508;
+        }
+
+        /* Additional Info Section */
+        .additional-info {
+            padding: 4rem 2rem;
+            background-color: var(--light-color);
+        }
+
+        .info-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .reservation-page-container {
+                grid-template-columns: 1fr;
+            }
+
+            .reservation-page-info {
+                padding-right: 0;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+
+
+            /* Contact Page Specific Styles */
+            .contact-hero {
+                height: 50vh;
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                           url('../img/contact-us-4126530_960_720.webp') center/cover no-repeat;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: var(--light-color);
+                margin-bottom: 4rem;
+            }
+    
+            .contact-hero-title {
+                font-size: 3.5rem;
+                margin-bottom: 1rem;
+            }
+    
+            .contact-section {
+                padding: 4rem 2rem;
+                background: #f9f9f9;
+            }
+    
+            .contact-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4rem;
+            }
+    
+            .contact-info {
+                padding: 2rem;
+                background: var(--light-color);
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .contact-info h3 {
+                color: var(--secondary-color);
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+    
+            .contact-detail {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.5rem;
+            }
+    
+            .contact-icon {
+                color: var(--primary-color);
+                font-size: 1.5rem;
+                margin-right: 1rem;
+                width: 30px;
+            }
+    
+            .contact-form {
+                padding: 2rem;
+                background: var(--light-color);
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+    
+            .form-control {
+                width: 100%;
+                padding: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+                transition: var(--transition);
+            }
+    
+            .form-control:focus {
+                border-color: var(--primary-color);
+                outline: none;
+            }
+    
+            textarea.form-control {
+                height: 150px;
+                resize: vertical;
+            }
+    
+            .submit-button {
+                display: inline-block;
+                padding: 1rem 2rem;
+                background: var(--primary-color);
+                color: var(--light-color);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: var(--transition);
+                font-size: 1.1rem;
+                width: 100%;
+            }
+    
+            .submit-button:hover {
+                background: #8B6914;
+                transform: translateY(-2px);
+            }
+    
+            .map-section {
+                padding: 4rem 2rem;
+            }
+    
+            .map-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                height: 400px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+    
+            .map-placeholder {
+                width: 100%;
+                height: 100%;
+                background: #eee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                color: #666;
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .contact-hero-title {
+                    font-size: 2.5rem;
+                }
+    
+                .contact-container {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+    
+                .contact-info, .contact-form {
+                    padding: 1.5rem;
+                }
+            }
