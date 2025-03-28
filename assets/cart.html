@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="brand-name">FranncieFuniture - Menu</title>
+    <title class="brand-name">FranncieFuniture - Cart</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,19 +37,15 @@
         <div class="nav-overlay"></div>
     </header>
 
-    <!-- Menu Hero Section -->
-    <section class="menu-page-hero">
-        <div class="menu-page-hero-content">
-            <h1 class="menu-page-hero-title">Our Products</h1>
-            <p class="hero-subtitle">Live Luxery</p>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section class="menu-page-section">
+    <!-- Cart Section -->
+    <section class="cart-section">
         <div class="menu-page-container">
-            <div class="menu-page-tabs" id="menu-tabs"></div>
-            <div id="menu-content"></div>
+            <h1 class="cart-title">Your Cart</h1>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: <span id="cart-total">0 FCFA</span></h3>
+                <a href="payment.html" class="cta-button" id="checkout-btn">Checkout</a>
+            </div>
         </div>
     </section>
 

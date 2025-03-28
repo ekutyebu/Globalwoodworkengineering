@@ -179,7 +179,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../img/top-view-fried-chicken-bucket-burgers_23-2148699020.jpg') center/cover no-repeat;
+        url('/assets/img/sofers/17.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -409,7 +409,7 @@ body {
         .about-page-hero {
             height: 60vh;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                       url('../img/a-logo-for-a-fast-food-restaurant-called_Fprm0GanS5-mkSh4FL0uMw_q12IqkeWTGaZUgtKsoPIqw.jpeg') center/cover no-repeat;
+                       url('/assets/img/sofers/poe.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -511,7 +511,7 @@ body {
         .values-section {
             padding: 6rem 2rem;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                       url('../img/medium-shot-cook-posing-studio_23-2150275706.jpg') center/cover no-repeat;
+                       url('/assets/img/luxery/9.jpg') center/cover no-repeat;
             color: var(--light-color);
         }
 
@@ -566,7 +566,7 @@ body {
         .menu-page-hero {
             height: 60vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                       url('../img/a-logo-for-a-fast-food-restaurant-called_Fprm0GanS5-mkSh4FL0uMw_q12IqkeWTGaZUgtKsoPIqw.jpeg') center/cover no-repeat;
+                       url('/assets/img/luxery/5.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1164,3 +1164,154 @@ body {
                     padding: 1.5rem;
                 }
             }
+
+            /* Cart Icon */
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.add-to-cart:hover {
+    background: var(--secondary-color);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.prev-btn, .next-btn {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.prev-btn:disabled, .next-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.prev-btn:hover:not(:disabled), .next-btn:hover:not(:disabled) {
+    background: var(--secondary-color);
+}
+
+/* Cart Page */
+.cart-section {
+    padding: 6rem 2rem;
+}
+
+.cart-title {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--light-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-controls button {
+    background: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.quantity-controls button:hover {
+    background: var(--secondary-color);
+}
+
+.remove {
+    background: #e74c3c;
+    color: var(--light-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.remove:hover {
+    background: #c0392b;
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.cart-total .cta-button {
+    margin-top: 1rem;
+}
+
+
+/* See More Button Container */
+.see-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.see-more-btn {
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.see-more-btn:hover {
+    background: var(--secondary-color);
+}

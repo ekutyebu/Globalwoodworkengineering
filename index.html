@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastFood237 - Fine Dining</title>
+    <title>FranncieFuniture</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <!-- Google Web Fonts -->
@@ -21,9 +21,9 @@
     <header class="header">
         <nav class="nav-container">
             <a href="#" class="logo">
-                <img src="assets/img/a-logo-for-a-fast-food-restaurant-called_Fprm0GanS5-mkSh4FL0uMw_q12IqkeWTGaZUgtKsoPIqw.jpeg" alt="FastFood237 Logo"
+                <img src="./assets/img/logo.jpg" alt="logo"
                     class="logo-img">
-                <span class="logo-text">FastFood237</span>
+                <span class="logo-text">Franncie Funiture</span>
             </a>
             <button class="hamburger" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
@@ -31,9 +31,14 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="assets/about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="assets/menu.html" class="nav-link">Menu</a></li>
-                <li class="nav-item"><a href="assets/reservation.html" class="nav-link">Reservation</a></li>
+                <li class="nav-item"><a href="assets/menu.html" class="nav-link">Products</a></li>
                 <li class="nav-item"><a href="assets/contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <a href="/assets/cart.html" class="nav-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div class="nav-overlay"></div>
@@ -42,9 +47,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Welcome to <span class="brand-name">FastFood237</span></h1>
+            <h1 class="hero-title">Welcome to <span class="brand-name">Franncie Funiture</span></h1>
             <p class="hero-subtitle">Experience fine dining at its finest</p>
-            <a href="#reservation" class="cta-button">Book a Table</a>
+            <a href="/assets/menu.html" class="cta-button">Get Products</a>
         </div>
     </section>
 
@@ -53,100 +58,32 @@
         <div class="section-container">
             <h2 class="section-title">Our Story</h2>
             <div class="about-content">
-                <img src="assets/img/woman-baking-kitchen-front-view_23-2150014889.avif" alt="Restaurant interior" class="about-image">
+                <img src="/assets/img/sofers/poe.jpg" alt="Restaurant interior" class="about-image">
                 <div class="about-text">
-                    <p>Welcome to <span class="brand-name">FastFood237</span>, where culinary excellence meets elegant
-                        ambiance. Our passionate team of
-                        chefs creates exceptional dishes using the finest ingredients, bringing you an unforgettable
-                        dining experience.</p>
-                    <p>Since our establishment in 1985, we have been committed to delivering outstanding service and
-                        innovative cuisine that celebrates both traditional and contemporary flavors.</p>
+                    <p>Welcome to <span class="brand-name">Franncie Funiture</span>, where timeless craftsmanship meets elegant design. Our passionate team of artisans creates exceptional pieces using the finest materials, bringing you an unforgettable home experience.<p>
+                    <p>Since our establishment in 2015, we have been committed to delivering outstanding service and innovative furniture that celebrates both traditional and contemporary styles.<p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="menu">
-        <div class="section-container">
-            <h2 class="section-title">Our Menu</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="assets/img/view-delicious-burger-with-buns-cheese_23-2150887834.jpg" alt="Dish 1" class="menu-image">
-                    <div class="menu-content">
-                        <span class="special-badge">Most Popular</span>
-                        <h3 class="menu-title">Yummy burger with buns cheese</h3>
-                        <p class="menu-price">3000 FCFA</p>
-                        <p class="menu-description">A mouthwatering burger showcasing melted cheese cascading over a perfectly grilled patty between toasted, golden-brown artisanal buns.</p>
-                        <p class="combo-suggestion">Make it a combo: Add fries and drink for 500 FCFA</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="assets/img/american-diner-aesthetics_23-2151854429.jpg" alt="Dish 2" class="menu-image">
-                    <div class="menu-content">
-                        <span class="special-badge">Most Popular</span>
-                        <h3 class="menu-title">Delicious fried chicken with french fries</h3>
-                        <p class="menu-price">5000 FCFA</p>
-                        <p class="menu-description">Irresistibly crispy, golden fried chicken paired with perfectly seasoned fries - a heavenly combo that satisfies every craving.
-                        </p>
-                        <p class="combo-suggestion">Make it a combo: Buy x2 and get a free cocktail</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="assets/img/food-7098703_1280.jpg" alt="Dish 3" class="menu-image">
-                    <div class="menu-content">
-                        <!-- <span class="special-badge">Most Popular</span> -->
-                        <h3 class="menu-title">Round italian pizza</h3>
-                        <p class="menu-price">5000 FCFA</p>
-                        <p class="menu-description">Authentic Italian round pizza with bubbling cheese, perfectly crisp crust, and fresh toppings made with love."</p>
-                        <p class="combo-suggestion">Make it a combo: Buy x2 and get 1 free cocktail</p>
-                    </div>
-                </div>
-            </div>
+<section id="menu" class="menu">
+    <div class="section-container">
+        <h2 class="section-title">Our Funitures</h2>
+        <div class="menu-grid" id="home-menu-grid"></div>
+        <div class="see-more-container">
+            <a href="assets/menu.html" class="cta-button see-more-btn">See More</a>
         </div>
-    </section>
-
-    <!-- Reservation Section -->
-    <h2 class="section-title">Make a Reservation</h2>
-    <section id="reservation" class="reservation">
-        <div class="section-container">
-            <form class="reservation-form">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" class="form-control" placeholder="Phone Number" required>
-                </div>
-                <div class="form-group">
-                    <input type="date" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <input type="time" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <select class="form-control" required>
-                        <option value="">Number of Guests</option>
-                        <option value="1">1 Person</option>
-                        <option value="2">2 People</option>
-                        <option value="3">3 People</option>
-                        <option value="4">4 People</option>
-                        <option value="5">5+ People</option>
-                    </select>
-                </div>
-                <button type="submit" class="cta-button">Book Now</button>
-            </form>
-        </div>
-    </section>
+    </div>
+</section>
 
      <!-- Footer Section -->
      <footer class="footer" id="contact">
         <div class="footer-content">
             <div class="footer-section">
-                <h3><span class="brand-name">FastFood237</span></h3>
-                <p>Serving quality fast food since 2015.</p>
+                <h3><span class="brand-name">Franncie Funiture</span></h3>
+                <p>Serving quality funitures since 2015.</p>
                 <div class="social-links">
                     <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -155,19 +92,17 @@
             </div>
             <div class="footer-section">
                 <h3>Hours</h3>
-                <p>Monday - Thursday: 10:30 AM - 10:00 PM</p>
-                <p>Friday - Saturday: 10:30 AM - 11:00 PM</p>
-                <p>Sunday: 11:00 AM - 9:00 PM</p>
+                <p></p>
             </div>
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Molyko, Buea, Cameroon</p>
+                <p>Yassa, Douala, Cameroon</p>
                 <p>Phone: (+237) 677-079-559</p>
-                <p>Email: info@<span class="brand-name">fastfood237</span>.com</p>
+                <p>Email: info@<span class="brand-name">Franncie Funiture</span>.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 <span class="brand-name">FastFood237</span>. All rights reserved.</p>
+            <p>&copy; 2025 <span class="brand-name">Franncie Funiture</span>. All rights reserved.</p>
         </div>
     </footer>
 
