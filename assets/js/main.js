@@ -1,232 +1,256 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAET6imsxH2gxlOsnby9r76lt3ptLFSOg8",
+  authDomain: "webhosting-27629.firebaseapp.com",
+  projectId: "webhosting-27629",
+  storageBucket: "webhosting-27629.firebasestorage.app",
+  messagingSenderId: "779720974377",
+  appId: "1:779720974377:web:525ea2f2b26dd155e0bc38",
+  measurementId: "G-JS2XYGMZS0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Menu Data (shared across pages)
     const menuData = {
         "Sufers": [
             {
-                title: "traditional", 
-                price: 8000, 
-                image: "/assets/img/sofers/1.jpg", 
-                description: "traditional and contemporary flavors.", 
+                title: "The Cozy Throne", 
+                price: 250000, 
+                image: "img/sofers/1.jpg", 
+                description: "Sink into regal comfort with this plush sofa chair, where timeless design meets cloud-like cushioning for your ultimate relaxation.", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/sofers/3.jpg", 
-                description: "", 
+                title: "The Lounger's Dream", 
+                price: 150000, 
+                image: "img/sofers/3.jpg", 
+                description: "Crafted for the art of unwinding, this sofa chair blends sleek style with irresistible softness—your perfect escape after a long day.", 
                 badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/sofers/17.jpg", 
-                description: "", 
+                title: "The Chic Retreat", 
+                price: 200000, 
+                image: "img/sofers/17.jpg", 
+                description: "Elevate your space with this stunning sofa chair, a fusion of modern elegance and cozy charm that beckons you to sit and stay awhile.", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/sofers/5.jpg", 
-                description: "", 
+                title: "Title: The Hugging Haven", 
+                price: 228000, 
+                image: "img/sofers/5.jpg", 
+                description: "Wrap yourself in luxury with this sofa chair, designed to cradle you in comfort while adding a touch of sophistication to any room.", 
                 badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/sofers/6.jpg", 
-                description: "", 
+                title: "The Style Seat", 
+                price: 78000, 
+                image: "img/sofers/6.jpg", 
+                description: "Bold lines, plush upholstery, and pure comfort—this sofa chair isn’t just furniture, it’s a statement of effortless cool.", 
                 badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/sofers/7.jpg", 
-                description: "", 
+                title: "The Serenity Spot", 
+                price: 88000, 
+                image: "img/sofers/7.jpg", 
+                description: "Find your calm in this beautifully crafted sofa chair, where every curve and cushion invites peace and relaxation into your home.", 
                 badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/sofers/8.jpg", 
-                description: "", 
+                title: "The Timeless Perch", 
+                price: 338000, 
+                image: "img/sofers/8.jpg", 
+                description: "A classic reimagined—this sofa chair offers enduring design and supreme comfort, making it the heart of your living space.", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/sofers/16.jpg", 
-                description: "", 
+                title: "The Plush Escape", 
+                price: 90000, 
+                image: "img/sofers/16.jpg", 
+                description: "Dive into decadence with this sofa chair, where rich fabrics and perfect support turn every seat into a mini vacation.", 
                 badge: "", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "The Modern Nest", 
                 price: 8000, 
-                image: "/assets/img/sofers/12.jpg", 
-                description: "", 
+                image: "img/sofers/12.jpg", 
+                description: "Sleek, stylish, and oh-so-comfy—this sofa chair redefines lounging with its contemporary flair and inviting embrace.", 
                 badge: "Most Popular", 
                 combo: 500
             }
         ],
         "Doors": [
             {
-                title: "", 
+                title: "The Grand Gateway", 
                 price: 8000, 
-                image: "/assets/img/doors/1.jpg", 
-                description: "", 
+                image: "img/doors/1.jpg", 
+                description: "Step into elegance with this stunning door, where bold design meets sturdy craftsmanship to welcome you home in style.", 
+                badge: "M", 
+                combo: 500
+            },
+            {
+                title: "The Timeless Portal", 
+                price: 38000, 
+                image: "img/doors/2.jpg", 
+                description: "A classic beauty built to last—this door blends enduring charm with solid construction, opening the way to every moment.", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "The Warm Welcome", 
+                price: 8000, 
+                image: "img/doors/3.jpg", 
+                description: "Crafted from rich woods, this door invites you in with its cozy allure and promises lasting strength for years to come.", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/doors/2.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                title: "The Modern Threshold", 
+                price: 15000, 
+                image: "img/doors/4.jpg", 
+                description: "Sleek lines and cutting-edge style define this door, offering a chic entry that’s as functional as it is eye-catching.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "The Bold Barrier", 
                 price: 8000, 
-                image: "/assets/img/doors/3.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                image: "img/doors/5.jpg", 
+                description: "Make a statement with this striking door—its unique design and robust build turn every entrance into an event.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "The Serenity Seal", 
                 price: 8000, 
-                image: "/assets/img/doors/4.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                image: "img/doors/6.jpg", 
+                description: "Close out the world with this beautifully crafted door, blending peace of mind with a touch of architectural grace.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/doors/5.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                title: "The Artisan’s Archway", 
+                price: 90000, 
+                image: "img/doors/7.jpg", 
+                description: "Handcrafted details and premium materials make this door a work of art, opening your space to timeless sophistication.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/doors/6.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                title: "The Fortress Frame", 
+                price: 84000, 
+                image: "img/doors/8.jpg", 
+                description: "Strength meets style in this rugged door, designed to protect and impress with its unyielding presence and polish.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/doors/7.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/doors/8.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/doors/9.jpg", 
-                description: "", 
+                title: "The Lightkeeper’s Entry", 
+                price: 810000, 
+                image: "img/doors/9.jpg", 
+                description: "Brighten your home with this glass-accented door, where airy design meets solid security for a perfect balance of form and function.", 
                 badge: "Most Popular", 
                 combo: 500
             }
         ],
         "Luxery": [
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/1.jpg", 
-                description: "", 
+                title: "King sit", 
+                price: 800000, 
+                image: "img/luxery/1.jpg", 
+                description: "Soft and confortale", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "Luxery sit", 
+                price: 1000000, 
+                image: "img/luxery/2.jpg", 
+                description: "Very relaxing at all times", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/2.jpg", 
-                description: "", 
+                title: "The Lightkeeper’s sit", 
+                price: 300000, 
+                image: "img/luxery/3.jpg", 
+                description: "Dive into decadence with this sofa chair, where rich fabrics and perfect support turn every seat into a mini vacation.", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "The Serenity Seal", 
+                price: 80000, 
+                image: "img/luxery/4.jpg", 
+                description: "Close out the world with this beautifully crafted door, blending peace of mind with a touch of architectural grace.", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "The Fortress Frame", 
                 price: 8000, 
-                image: "/assets/img/luxery/3.jpg", 
-                description: "", 
+                image: "img/luxery/5.jpg", 
+                description: "A classic reimagined—this sofa chair offers enduring design and supreme comfort, making it the heart of your living space.", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "The Modern Threshold", 
+                price: 8000, 
+                image: "img/luxery/6.jpg", 
+                description: "A classic reimagined—this sofa chair offers enduring design and supreme comfort, making it the heart of your living space.", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "The Plush Escape", 
+                price: 76000, 
+                image: "img/luxery/7.jpg", 
+                description: "A classic beauty built to last—this door blends enduring charm with solid construction, opening the way to every moment.", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "The good life", 
                 price: 8000, 
-                image: "/assets/img/luxery/4.jpg", 
-                description: "", 
+                image: "img/luxery/8.jpg", 
+                description: "A classic beauty built to last—this door blends enduring charm with solid construction, opening the way to every moment.", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "The Warm Welcome", 
+                price: 73000, 
+                image: "img/luxery/9.jpg", 
+                description: "Strength meets style in this rugged door, designed to protect and impress with its unyielding presence and polish.", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/5.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/6.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/7.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/8.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/9.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/luxery/10.jpg", 
-                description: "", 
+                title: "The Bold Barrier", 
+                price: 800000, 
+                image: "img/luxery/10.jpg", 
+                description: "Strength meets style in this rugged door, designed to protect and impress with its unyielding presence and polish.", 
                 badge: "Most Popular", 
                 combo: 500
             }
@@ -234,50 +258,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
         "Beds": [
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/beds/1.jpg", 
-                description: "", 
+                title: "Sleep Like a baby", 
+                price: 8000000, 
+                image: "img/beds/1.jpg", 
+                description: "Best soft and confortable", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "Bed", 
+                price: 2000000, 
+                image: "img/beds/2.jpg", 
+                description: "Best soft and confortable", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "Bed", 
                 price: 8000, 
-                image: "/assets/img/beds/2.jpg", 
-                description: "", 
+                image: "img/beds/3.jpg", 
+                description: "Best soft and confortable", 
+                badge: "", 
+                combo: 500
+            },
+            {
+                title: "bed", 
+                price: 823000, 
+                image: "img/beds/4.jpg", 
+                description: "Best soft and confortable", 
                 badge: "Most Popular", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/beds/3.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                title: "Bed", 
+                price: 800560, 
+                image: "img/beds/5.jpg", 
+                description: "Best soft and confortable", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "Bed", 
                 price: 8000, 
-                image: "/assets/img/beds/4.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/beds/5.jpg", 
-                description: "", 
-                badge: "Most Popular", 
-                combo: 500
-            },
-            {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/beds/6.jpg", 
-                description: "", 
+                image: "img/beds/6.jpg", 
+                description: "Best soft and confortable", 
                 badge: "Most Popular", 
                 combo: 500
             }
@@ -285,34 +309,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
         "Deco": [
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/deco/1.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                title: "Deco", 
+                price: 90000, 
+                image: "img/deco/1.jpg", 
+                description: "Brighten your home with this glass-accented door, where airy design meets solid security for a perfect balance of form and function.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/deco/2.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                title: "Deco", 
+                price: 8022300, 
+                image: "img/deco/2.jpg", 
+                description: "Brighten your home with this glass-accented door, where airy design meets solid security for a perfect balance of form and function.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
+                title: "Deco", 
                 price: 8000, 
-                image: "/assets/img/deco/3.jpg", 
-                description: "", 
-                badge: "Most Popular", 
+                image: "img/deco/3.jpg", 
+                description: "Brighten your home with this glass-accented door, where airy design meets solid security for a perfect balance of form and function.", 
+                badge: "", 
                 combo: 500
             },
             {
-                title: "", 
-                price: 8000, 
-                image: "/assets/img/deco/4.jpg", 
-                description: "", 
+                title: "Deco", 
+                price: 1000000, 
+                image: "img/deco/4.jpg", 
+                description: "Brighten your home with this glass-accented door, where airy design meets solid security for a perfect balance of form and function.", 
                 badge: "Most Popular", 
                 combo: 500
             }
@@ -323,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Pagination settings
-    const itemsPerPage = 10;
+    const itemsPerPage = 9;
 
     // Hamburger Menu
     const hamburger = document.querySelector('.hamburger');
@@ -395,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const allItems = Object.values(menuData).flat();
             // Shuffle array and pick up to 5 random items
             const shuffled = allItems.sort(() => 0.5 - Math.random());
-            const randomItems = shuffled.slice(0, 5);
+            const randomItems = shuffled.slice(0, 6);
 
             homeMenuGrid.innerHTML = '';
             randomItems.forEach(item => {

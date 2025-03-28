@@ -815,90 +815,6 @@ body {
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-        /*reservation page Hero Section */
-        .reservation-page-hero {
-            height: 60vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('../img/waitress-is-serving-table_130153-92.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--light-color);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 0 2rem;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        /* reservation-page Section */
-        .reservation-page-section {
-            padding: 6rem 2rem;
-            background-color: #f9f9f9;
-        }
-
-        .reservation-page-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .reservation-page-info {
-            padding-right: 2rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .info-text {
-            margin-bottom: 1.5rem;
-            color: #666;
-        }
-
-        .policy-list {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .policy-item {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .policy-item::before {
-            content: '•';
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-
         /* Form Styles */
         .reservation-page-form {
             background: var(--light-color);
@@ -1024,7 +940,7 @@ body {
             .contact-hero {
                 height: 50vh;
                 background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                           url('../img/contact-us-4126530_960_720.webp') center/cover no-repeat;
+                           url('/assets/img/luxery/4.jpg') center/cover no-repeat;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1314,4 +1230,8 @@ body {
 
 .see-more-btn:hover {
     background: var(--secondary-color);
+}
+
+.payment-section {
+    padding-top: 5rem;
 }
