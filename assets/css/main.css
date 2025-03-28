@@ -179,7 +179,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('/assets/img/sofers/17.jpg') center/cover no-repeat;
+        url('../img/sofers/17.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,31 +304,6 @@ body {
     color: #666;
 }
 
-/* Reservation Section */
-.reservation {
-    padding: 6rem 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('../img/waitress-is-serving-table_130153-92.jpg') center/cover no-repeat;
-    color: var(--light-color);
-}
-
-.reservation-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-control {
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
 /* Footer */
 .footer {
     background: var(--secondary-color);
@@ -409,7 +384,7 @@ body {
         .about-page-hero {
             height: 60vh;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                       url('/assets/img/sofers/poe.jpg') center/cover no-repeat;
+                       url('../img/sofers/poe.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -511,7 +486,7 @@ body {
         .values-section {
             padding: 6rem 2rem;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                       url('/assets/img/luxery/9.jpg') center/cover no-repeat;
+                       url('../img/luxery/9.jpg') center/cover no-repeat;
             color: var(--light-color);
         }
 
@@ -566,7 +541,7 @@ body {
         .menu-page-hero {
             height: 60vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                       url('/assets/img/luxery/5.jpg') center/cover no-repeat;
+                       url('../img/luxery/5.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -940,7 +915,7 @@ body {
             .contact-hero {
                 height: 50vh;
                 background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                           url('/assets/img/luxery/4.jpg') center/cover no-repeat;
+                           url('../img/luxery/4.jpg') center/cover no-repeat;
                 display: flex;
                 align-items: center;
                 justify-content: center;
