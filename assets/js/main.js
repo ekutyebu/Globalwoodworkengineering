@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 title: "The Modern Nest", 
-                price: 8000, 
+                price: 80000, 
                 image: "img/sofers/12.jpg", 
                 description: "Sleek, stylish, and oh-so-comfy—this sofa chair redefines lounging with its contemporary flair and inviting embrace.", 
                 badge: "Most Popular", 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Doors": [
             {
                 title: "The Grand Gateway", 
-                price: 8000, 
+                price: 20000, 
                 image: "img/doors/1.jpg", 
                 description: "Step into elegance with this stunning door, where bold design meets sturdy craftsmanship to welcome you home in style.", 
                 badge: "M", 
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 title: "The Fortress Frame", 
-                price: 8000, 
+                price: 80000, 
                 image: "img/luxery/5.jpg", 
                 description: "A classic reimagined—this sofa chair offers enduring design and supreme comfort, making it the heart of your living space.", 
                 badge: "", 
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 title: "The Modern Threshold", 
-                price: 8000, 
+                price: 80000, 
                 image: "img/luxery/6.jpg", 
                 description: "A classic reimagined—this sofa chair offers enduring design and supreme comfort, making it the heart of your living space.", 
                 badge: "Most Popular", 
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 title: "The good life", 
-                price: 8000, 
+                price: 90000, 
                 image: "img/luxery/8.jpg", 
                 description: "A classic beauty built to last—this door blends enduring charm with solid construction, opening the way to every moment.", 
                 badge: "", 
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 title: "Bed", 
-                price: 8000, 
+                price: 70000, 
                 image: "img/beds/3.jpg", 
                 description: "Best soft and confortable", 
                 badge: "", 
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 title: "Bed", 
-                price: 8000, 
+                price: 500000, 
                 image: "img/beds/6.jpg", 
                 description: "Best soft and confortable", 
                 badge: "Most Popular", 
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             {
                 title: "Deco", 
-                price: 8000, 
+                price: 60000, 
                 image: "img/deco/3.jpg", 
                 description: "Brighten your home with this glass-accented door, where airy design meets solid security for a perfect balance of form and function.", 
                 badge: "", 
