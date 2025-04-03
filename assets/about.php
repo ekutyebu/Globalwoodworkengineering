@@ -1,51 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="brand-name">Global woodwork engineering - About Us</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
-        rel="stylesheet">
-    
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="#" class="logo">
-                <img src="./img/logo.jpg" alt="Logo"
-                    class="logo-img">
-                <span class="logo-text">GWE</span>
-            </a>
-            <button class="hamburger" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="/index.php" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/assets/about.php" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/assets/menu.php" class="nav-link">Products</a></li>
-                <li class="nav-item"><a href="/assets/contact.php" class="nav-link">Contact</a></li>
-                <li class="nav-item">
-                    <a href="/assets/cart.php" class="nav-link cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="nav-overlay"></div>
-    </header>
-
-
-    <!-- About Hero Section -->
-    <section class="about-page-hero">
+<?php $pageTitle = "About Us - Global woodwork engineering"; ?>
+<?php include '../header.php'; ?>
+<!-- About Hero Section -->
+<section class="about-page-hero">
         <div class="about-page-hero-content">
             <h1 class="about-page-hero-title">Our Story</h1>
             <p class="hero-subtitle">A legacy of furniture excellence since 2004</p>
@@ -130,34 +86,6 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer" id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3><span class="brand-name">Global woodwork engineering</span></h3>
-                <p>Serving quality funitures since 2004.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Hours</h3>
-                <p>We are working 24/6</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Ari Neptune,face Aqua vita(Douala Cameroon)</p>
-                <p>Phone: 677658626 and 694859376</p>
-                <p>Email: cheuassafrançois@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 <span class="brand-name">Globalwoodworkengineering</span>. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script
-</body>
-</html>
+    <script src="js/main.js"></script>
+    <script src="assets/js/firebase.js"></script>
+<?php include '../footer.php'; ?>
