@@ -26,7 +26,7 @@
             message += `\nTotal: ${total} FCFA\n\nWebsite: ${websiteLink}`;
 
             // Replace <YOUR_PHONE_NUMBER> with the actual phone number
-            const whatsappLink = `https://wa.me/237 683434305?text=${encodeURIComponent(message)}`;
+            const whatsappLink = `https://wa.me/+237683434305?text=${encodeURIComponent(message)}`;
             whatsappLinkContainer.innerHTML = `
                 <a href="${whatsappLink}" target="_blank" class="cta-button">Contact Us on WhatsApp</a>
             `;
