@@ -7,7 +7,7 @@
             <div id="cart-items"></div>
             <div class="cart-total">
                 <h3>Total: <span id="cart-total">0 FCFA</span></h3>
-                <a href="payment.html" class="cta-button" id="checkout-btn">Checkout</a>
+                <a href="payment.php" class="cta-button" id="checkout-btn">Checkout</a>
             </div>
         </div>
     </section>
