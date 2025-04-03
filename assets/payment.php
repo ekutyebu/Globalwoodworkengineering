@@ -1,16 +1,22 @@
-<?php $pageTitle = "Payment - Global woodwork engineering"; ?>
-<?php include '../header.php'; ?>
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    exit();
+}
+$pageTitle = "Payment - Global woodwork engineering";
+include '../header.php';
+?>
 <link rel="stylesheet" href="/Globalwoodworkengineering/assets/css/main.css"> <!-- Corrected path -->
-<!-- WhatsApp Section -->
 <section class="payment-section">
     <div class="menu-page-container">
-        <h1 class="payment-title">Contact Us on WhatsApp</h1>
+        <h1 class="payment-title">Payment</h1>
+        <div id="payment-summary"></div>
         <div id="whatsapp-link-container" style="margin-top: 20px;">
             <!-- WhatsApp link will be dynamically generated here -->
         </div>
     </div>
 </section>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -28,8 +34,13 @@
             // Replace <YOUR_PHONE_NUMBER> with the actual phone number
             const whatsappLink = `https://wa.me/+237683434305?text=${encodeURIComponent(message)}`;
             whatsappLinkContainer.innerHTML = `
-                <a href="${whatsappLink}" target="_blank" class="cta-button">Contact Us on WhatsApp</a>
+                <a href="${whatsappLink}" target="_blank" class="cta-button" id="whatsapp-button">Contact Us on WhatsApp</a>
             `;
+
+            // Clear cart when the WhatsApp button is clicked
+            document.getElementById('whatsapp-button').addEventListener('click', function () {
+                localStorage.removeItem('cart');
+            });
         } else {
             whatsappLinkContainer.innerHTML = `<p>Your cart is empty. Add items to generate a WhatsApp message.</p>`;
         }

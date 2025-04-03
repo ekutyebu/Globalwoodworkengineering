@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Ensure the session is started
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +30,15 @@
                 <li class="nav-item"><a href="/Globalwoodworkengineering/assets/about.php" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="/Globalwoodworkengineering/assets/menu.php" class="nav-link">Products</a></li>
                 <li class="nav-item"><a href="/Globalwoodworkengineering/assets/contact.php" class="nav-link">Contact</a></li>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <?php if ($_SESSION['user'] === 'adminuser'): ?> <!-- Show Admin Dashboard only for admin -->
+                        <li class="nav-item"><a href="/Globalwoodworkengineering/admin/dashboard.php" class="nav-link">Admin Dashboard</a></li>
+                    <?php endif; ?>
+                    <li class="nav-item"><a href="/Globalwoodworkengineering/assets/logout.php" class="nav-link">Logout</a></li>
+                <?php else: ?>
+                    <li class="nav-item"><a href="/Globalwoodworkengineering/assets/login.php" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="/Globalwoodworkengineering/assets/signup.php" class="nav-link">Sign Up</a></li>
+                <?php endif; ?>
                 <li class="nav-item">
                     <a href="/Globalwoodworkengineering/assets/cart.php" class="nav-link cart-icon">
                         <i class="fas fa-shopping-cart"></i>
