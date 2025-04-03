@@ -11,10 +11,17 @@ include '../header.php';
     .signup-section {
         padding-top: 100px; /* Prevent header overlap */
     }
+    .error-message {
+        color: red;
+        margin-bottom: 1rem;
+    }
 </style>
 <section class="signup-section">
     <div class="menu-page-container">
         <h1 class="signup-title">Sign Up</h1>
+        <?php if (isset($_GET['error'])): ?>
+            <p class="error-message"><?php echo htmlspecialchars($_GET['error']); ?></p>
+        <?php endif; ?>
         <form action="process_signup.php" method="POST" class="signup-form">
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
